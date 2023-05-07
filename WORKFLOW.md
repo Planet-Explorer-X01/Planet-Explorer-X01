@@ -4,9 +4,10 @@
 | - | - |-| - |
 | 01. Sofware | 🟥 0% |  |
 |Camera|  |  | |
-| 02. Hardware| 🟥 0%|
-|Camera |  |  | |
-| 03. Documentation| 🟥 0%|
+| 02. Hardware| 🟩 86%|
+|-3d dsigns and prints |  90%|  | |
+|- wiring, power  |  40%|  | |
+| 03. Documentation| 🟥 2%|
 |Camera |  | | |
 ✅🟩🟧🟥
 
