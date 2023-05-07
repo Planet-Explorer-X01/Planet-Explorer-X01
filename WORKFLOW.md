@@ -2,10 +2,10 @@
 
 | ресурс | работи се/изпълнен | автор/и | обяснения |
 | - | - |-| - |
-
 | 01. Hardware| 🟩 86%|
 |-3d dsigns and prints |  90%|  | |
-|- wiring, power  |  40%|  | || 02. Software | 🟥 0% |  |
+|- wiring, power  |  40%|  | |
+| 02. Software | 🟥 0% |  |
 |esp32 ino|  |  | |
 |images to 360pan|  |  | |
 |server side|  |  | |
