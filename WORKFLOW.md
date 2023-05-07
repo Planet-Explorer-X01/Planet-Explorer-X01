@@ -8,7 +8,7 @@
 | 02. Software | 🟥 0% |  |
 |esp32 ino|  |  | |
 |images to 360pan|  |  | |
-|server side|  |  | |
+|server side| 10% |  | |
 | 03. Documentation| 🟥 2%|
 |Camera |  | | |
 ✅🟩🟧🟥
