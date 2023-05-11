@@ -5,8 +5,8 @@
 | 01. Hardware| 🟩 86%|
 |-3d dsigns and prints |  90%|
 |- wiring, power  |  40%|
-| 02. Software | 🟥 2% | 
-|esp32 ino|  |
+| 02. Software | 🟧 45% | 
+|esp32 ino| Y |
 |images to 360pan|  |
 |server side| 10% |  |
 | 03. Documentation| 🟥 2%|
