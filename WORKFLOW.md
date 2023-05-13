@@ -9,7 +9,7 @@
 |esp32 ino| Y |
 |images to 360pan|  |
 |server side| 10% |  |
-| 03. Documentation| 🟥 2%|
+| 03. Documentation| 🟩 80%|
 |Camera |  |
 ✅🟩🟧🟥
 
