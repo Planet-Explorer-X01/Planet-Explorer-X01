@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>ESP32 – CAM 360 </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="upload" href="upload.php">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+<body>
+  <div class="container">
+    <div class="topic"><b>ESP32 – CAM 360</b></div>
+    <div class="content">
+      <input type="radio" name="slider" checked id="home">
+      <input type="radio" name="slider" id="blog">
+      <input type="radio" name="slider" id="help">
+      <input type="radio" name="slider" id="code">
+      <input type="radio" name="slider" id="about">
+      <input type="radio" name="slider" id="fileupload">
+
+      <div class="list">
+        <label for="home" class="home">
+          <span class="icon"><i class="fas fa-solid fas fa-lightbulb"></i></span>
+          <span class="title"><b>Идея</b></span>
+      </label>
+
+      <label for="blog" class="blog">
+        <span class="icon"><i class="fas fa-code"></i></span>
+        <span class="title"><b>Софтуер</b></span>
+      </label>
+
+      <label for="help" class="help">
+        <span class="icon"><i class="fas fa-regular fas fa-sim-card"></i></span>
+        <span class="title"><b>Хардуер</b></span>
+      </label>
+
+      <label for="code" class="code">
+        <span class="icon"><i class="fas fa-solid fas fa-sitemap"></i></span>
+        <span class="title"><b>Схеми</b></span>
+      </label>
+
+      <label for="about" class="about">
+        <span class="icon"><i class="fas fa-regular fas fa-images"></i></span>
+        <span class="title"><b>Снимки</b></span>
+      </label>
+
+      <label for="fileupload" class="fileupload">
+        <span class="icon"><i class="fas fa-regular fas fa-upload"></i></span>
+        <span class="title"><b>Качване</b></span>
+      </label>
+
+      <div class="slider"></div>
+    </div>
+      <div class="text-content">
+        <div class="boxed">
+          <div class="boxedtext">
+            <div class="home text">
+              <div class="title">Идея на проекта</div>
+              <div class="content">
+                <p>Идеята на нашия проект е да направим прототип на робот, използвайки ESP32-CAM. 
+                  Целта ни е с тази камера да можем да правим 360-градусови панорамни снимки. 
+                  Използваме стъпков мотор (28byj-48), с помощта на който ще завъртаме камерата. 
+                  Той е програмиран така, че да прави едно пълно завъртане с 16 спирки и съответно 
+                  да бъдат направени същия брой снимки. Накрая тези снимки се "слепват" благодарение 
+                  на специален софтуер и се получава една панорамна. Цялата конструкция е "сглобена" 
+                  с помощта на 3D принтирани части: кутия и стойка.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="boxed">
+          <div class="blog text">
+            <div class="title">Софтуер</div>
+            <div class="content">
+              <div class="responsive">
+
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\software_camPinDef.jpg" alt="camPin">
+                  </div>
+                  <div class="texttoimg">
+                    <pre>Определяне на пиновете на камерата.</pre>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\software_picCountAndMotorpins.jpg" alt="PhMotor">
+                  </div>
+                  <div class="texttoimg">
+                    <pre>Създаваме променлива, за да 
+следим броя направени снимки.
+Задаване на пиновете за мотора.</pre>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\software_camParameters.jpg" alt="camPar">
+                  </div>
+                  <div class="texttoimg">
+                    Конфигурация на камерата.
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\software_camAdjusment.jpg" alt="camAdj">
+                  </div>
+                  <div class="texttoimg">
+                    <pre>Настройки на камерата. 
+От тук могат да бъдат променени настройки като:
+-> контраст;
+-> наситеност;
+-> яркост;
+-> баланс на цветовете; 
+-> други.</pre>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\software_camStartSD.jpg" alt="startSD">
+                  </div>
+                  <div class="texttoimg">
+                    <pre>Прави проверка дали има MicroSD 
+карта и връща отговор.
+Прави снимка и връща състоянието.</pre>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\software_camMicroSDsave.jpg" alt="savePh">
+                  </div>
+                  <div class="texttoimg">
+                    <pre>
+Запазва снимка в 
+MicroSD картата.</pre>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\software_stepperRotation.jpg" alt="PhMotor">
+                  </div>
+                  <div class="texttoimg">
+                    <pre>
+В цикъла се извършва процесът по 
+завъртане на камерата с
+помощта на мотора.</pre>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\software_StartUp.jpg" alt="StartUp">
+                  </div>
+                  <div class="texttoimg">
+                    <pre>
+От тук започва процесът по 
+стартиране на камерата и се 
+извършва проверка дали има 
+сложена SD карта.</pre>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\software_picTaking.jpg" alt="StartUp">
+                  </div>
+                  <div class="texttoimg">
+                    <pre>
+Цикъл, в който се извършват всички процеси:
+-> Камерата се върти
+-> Правят се снимки
+-> Отчита се броят снимки
+-> Качват се на SD картата</pre>
+                  </div>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="boxed">
+          <div class="help text">
+            <div class="title">Хардуер</div>
+            <div class="content">
+              <div class="responsive">
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\esp32-cam.jpg" alt="ESP32">
+                  </div>
+                  <div class="texttoimg">
+                    <pre>
+ESP32-CAM е модул за камера с малък размер и ниска 
+консумацияна енергия, базиран на ESP32. Предлага се с камера 
+OV2640 и осигурява вграден слот за TF карта. ESP32-CAM може 
+да се използва широко в интелигентни IoT приложения като 
+безжично видео наблюдение,качване на WiFi 
+изображения, QR идентификация и т.н.</pre>
+                  </div>
+                </div>
+                <br>
+                
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\StepperMotorDriver.jpg" alt="StepperMotorDriver">
+                  </div>
+                  <div class="texttoimg">
+                    <pre>
+ULN2003, има способност за работа с 
+висок ток и високо напрежение, по този
+начин осигурява по-голямо усилване на 
+тока от единичен транзистор и 
+позволява изходът за нисък ток на
+микроконтролера да управлява 
+стъпков двигател с висок ток.</pre>
+                  </div>
+                </div>
+                <br>
+
+                <div class="cont">
+                  <div class="imageSoftHd ">
+                    <img src="siteImages\StepperMotor.jpg" alt="StepperMotor">
+                  </div>
+                  <div class="texttoimg">
+                    <pre>
+Стъпковият двигател 28BYJ-48. 28BYJ-48 е
+5-жилен униполярен стъпков двигател, 
+който работи на 5V. Перфектен е за 
+проекти, които изискват точно 
+позициониране. Тъй като двигателят не 
+използва контактни четки, той има 
+относително прецизно движение и е 
+доста надежден.</pre>
+                  </div>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="boxed">
+          <div class="code text">
+            <div class="title">Схеми</div>
+            <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="siteImages\PanoramicPhotosScheme.jpg">
+                  <img src="siteImages\PanoramicPhotosScheme.jpg" alt="panorama" width="600" height="400">
+                </a>
+                <div class="desc">Схема за панорамните снимки</div>
+              </div>
+            </div>
+
+            <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="siteImages\motorController.jpeg">
+                  <img src="siteImages\motorController.jpeg" alt="motorController" width="600" height="400">
+                </a>
+                <div class="desc">ULN2003 Stepper Motor Driver Board</div>
+              </div>
+            </div>
+
+            <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="siteImages\ESP32-CAM-schematic-diagram.jpg">
+                  <img src="siteImages\ESP32-CAM-schematic-diagram.jpg" alt="scheme" width="600" height="400">
+                </a>
+                <div class="desc">ESP32</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="boxed">
+          <div class="about text">
+          <div class="title">Снимки</div>
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="siteImages\cam1.jpg">
+                <img src="siteImages\cam1.jpg" alt="cam1" width="600" height="400">
+              </a>
+              <div class="desc"><font size = "5">Изглед на конструкцията отгоре</font></div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="siteImages\cam2.jpg">
+                <img src="siteImages\cam2.jpg" alt="cam2" width="600" height="400">
+              </a>
+              <div class="desc">Камерата, моторът и контролерът</div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="siteImages\cam3.jpg">
+                <img src="siteImages\cam3.jpg" alt="cam3" width="600" height="400">
+              </a>
+              <div class="desc"><font size = "5">Контролерът, управляващ мотора</font></div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="siteImages\cam4.jpg">
+                <img src="siteImages\cam4.jpg" alt="cam4" width="600" height="400">
+              </a>
+              <div class="desc">Изглед към ESP32-CAM</div>
+            </div>
+          </div>
+          
+          <div class="clearfix"></div>
+          <div style="padding:6px;">
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="siteImages\cam5.jpg">
+                <img src="siteImages\cam5.jpg" alt="cam5" width="600" height="400">
+              </a>
+              <div class="desc">Фронтален изглед на ESP32-CAM</div>
+            </div>
+          </div>
+            
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="siteImages\cam6.jpg">
+                <img src="siteImages\cam6.jpg" alt="cam6" width="600" height="400">
+              </a>
+              <div class="desc">Фронтален изглед на ESP32-CAM</div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+          <div style="padding:6px;">
+          
+            <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="siteImages\Body4.stl">
+                  <img src="siteImages\Body.jpg" alt="camBody" width="600" height="400">
+                </a>
+                <div class="desc">3D модел на тялото на камерата</div>
+              </div>
+            </div>
+
+            <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="siteImages\cam32 and stepper v1 (2).stl">
+                  <img src="siteImages\esp32 box.jpg" alt="camBox" width="600" height="400">
+                </a>
+                <div class="desc">3D модел на кутия за мотора и камерата</div>
+              </div>
+            </div>
+
+            <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="siteImages\cam32 and stepper v1 stand v3.stl">
+                  <img src="siteImages\cam32 stand.jpg" alt="camStand" width="600" height="400">
+                </a>
+                <div class="desc">3D модел на стойката за камерата</div>
+              </div>
+            </div>
+
+            <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="siteImages\cam32 and stepper v1 stand v3.stl">
+                  <img src="siteImages\esp32 stand.jpg" alt="camStand" width="600" height="400">
+                </a>
+                <div class="desc">3D модел на поставка за модела</div>
+              </div>
+            </div>
+        </div>
+      </div>
+        </div>
+        
+        <div class="boxed">
+          <div class="boxedtext">
+            <div class="fileupload text">
+              <div class="title">Качване на файлове</div>
+              <div class="content">
+                
+              </div>
+              <div>
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                  Select image to upload:
+                  <input type="file" name="fileToUpload" id="fileToUpload">
+                  <input type="submit" value="Upload Image" name="submit">
+                </form>
+                <br>
+                <center><a href="http://localhost/fileupload/uploads/"> Photos </a></center>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
