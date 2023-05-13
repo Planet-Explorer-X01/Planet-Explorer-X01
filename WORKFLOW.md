@@ -10,7 +10,6 @@
 |images to 360pan|  |
 |server side| 10% |  |
 | 03. Documentation| 🟩 80%|
-|Camera |  |
 ✅🟩🟧🟥
 
 Указания:
