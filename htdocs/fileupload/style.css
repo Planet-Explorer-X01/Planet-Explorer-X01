@@ -113,7 +113,7 @@ div.desc {
   width: 10000px;
   height: 830px;
   padding: 40px 50px  40px  40px;
-  background: #050517;
+  background: #090927;
   margin: 0 20px;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -206,10 +206,10 @@ div.desc {
 }
 .content .text{
   display: none;
-  color: #786c87;
+  color: #b1acb7;
 }
 .content .text .title{
-  font-size: 35px;
+  font-size: 40px;
   margin-bottom: 10px;
   font-weight: 500;
   color: #b4a4c8;
