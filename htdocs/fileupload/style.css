@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&subset=cyrillic');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#1c1f5b;
+  margin: 0;
+}
+img { 
+  display: block;  
+}
+.main{
+  margin-left: 30px;
+}
+.cont{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.imageSoftHd {
+  flex-basis: 70%;
+  order: 0;
+}
+.texttoimg {
+  padding-left: 30px;
+  text-align: start;
+  border: none;
+}
+/* #region image style */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* #endregion */
+
+
+
+/* #region *site layout*/
+
+.boxed .container{
+  border: none;
+  width: 100%;
+  height: 600px;
+  overflow: auto;
+  position: fixed; 
+  right: 180px;
+  left: 500px;
+  top: 210px;
+  padding: 40px 50px  40px  40px;
+}
+.imageText{
+  border: none;
+  margin-left: 600px;
+  height: 50px;
+  width: 20px;
+  text-align: justify;
+}
+::selection{
+  background: #444ce3;
+  color: #fff;
+}
+.container{
+  max-width: 10000px;
+  width: 10000px;
+  height: 830px;
+  padding: 40px 50px  40px  40px;
+  background: #050517;
+  margin: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.container .topic{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  color: #DECDF5;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 30px;
+  position: inherit;
+}
+.content .list{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-right: 50px;
+  bottom: 150px;
+  position: fixed;
+  top: 300px;
+}
+.content .list label{
+  height: 60px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 60px;
+  cursor: pointer;
+  padding-left: 10px;
+  transition: all 0.5s ease;
+  color: #7b7979;
+  z-index: 12;
+}
+#home:checked ~ .list label.home,
+#blog:checked ~ .list label.blog,
+#help:checked ~ .list label.help,
+#code:checked ~ .list label.code,
+#about:checked ~ .list label.about,
+#fileupload:checked ~ .list label.fileupload{
+  color: #fff;
+}
+.content .list label:hover{
+  color: #6d50e2;
+  
+}
+.content .slider{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-radius: 12px;
+  background: #6d50e2;
+  transition: all 0.4s ease;
+}
+#home:checked ~ .list .slider{
+  top: 0;
+}
+#blog:checked ~ .list .slider{
+  top: 60px;
+}
+#help:checked ~ .list .slider{
+  top: 120px;
+}
+#code:checked ~ .list .slider{
+  top: 180px;
+}
+#about:checked ~ .list .slider{
+  top: 240px;
+}
+#fileupload:checked ~ .list .slider{
+  top: 300px;
+}
+.content .text-content{
+  width: 80%;
+  height: 700px;
+  margin-left: 450px;
+}
+.content .text{
+  display: none;
+  color: #786c87;
+}
+.content .text .title{
+  font-size: 35px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #b4a4c8;
+
+}
+.content .text p{
+  text-align: justify;
+  width: 900px;
+}
+.content .text-content .home{
+  display: block;
+}
+#home:checked ~ .text-content .home,
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about,
+#fileupload:checked ~ .text-content .fileupload{
+  display: block;
+}
+#blog:checked ~ .text-content .home,
+#help:checked ~ .text-content .home,
+#code:checked ~ .text-content .home,
+#about:checked ~ .text-content .home,
+#fileupload:checked ~ .text-content .home{
+  display: none;
+}
+.content input{
+  display: none;
+}
+/*#endregion*/
